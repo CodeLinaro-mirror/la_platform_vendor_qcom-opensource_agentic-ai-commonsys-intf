@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 /*
  * Copyright (c) 2026 Qualcomm Technologies, Inc.
  * All Rights Reserved.
