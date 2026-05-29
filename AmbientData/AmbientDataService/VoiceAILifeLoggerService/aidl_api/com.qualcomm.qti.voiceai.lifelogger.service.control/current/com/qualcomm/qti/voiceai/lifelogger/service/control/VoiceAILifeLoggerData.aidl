@@ -20,9 +20,15 @@
 // with such a backward incompatible change, it has a high risk of breaking
 // later when a module using the interface is updated, e.g., Mainline modules.
 
-package vendor.qti.AmbientDataControl;
+package com.qualcomm.qti.voiceai.lifelogger.service.control;
 @VintfStability
-parcelable AmbientDataControlRequest {
-  String jsonRequest;
-  @nullable vendor.qti.AmbientDataControl.ControlConfigFileDescriptor[] controlData;
+parcelable VoiceAILifeLoggerData {
+  String dataDescriptorName;
+  com.qualcomm.qti.voiceai.lifelogger.service.control.VoiceAILifeLoggerData.DataFormat dataFormat;
+  ParcelFileDescriptor fd;
+  @Backing(type="int")
+  enum DataFormat {
+    BYTE_STREAM = 0,
+    JSON_STRING = 1,
+  }
 }

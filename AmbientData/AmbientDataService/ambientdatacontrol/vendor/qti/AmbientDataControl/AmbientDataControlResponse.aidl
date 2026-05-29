@@ -3,6 +3,7 @@
 * SPDX-License-Identifier: BSD-3-Clause-Clear
 */
 
+package vendor.qti.AmbientDataControl;
 import vendor.qti.AmbientDataControl.AdditionalControlData;
 
 /**

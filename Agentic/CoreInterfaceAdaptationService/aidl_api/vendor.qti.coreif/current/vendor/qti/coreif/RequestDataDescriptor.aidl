@@ -1,8 +1,7 @@
 /**
-* Copyright (c) Qualcomm Technologies, Inc. and/or its subsidiaries.
-* SPDX-License-Identifier: BSD-3-Clause-Clear
-*/
-
+ * Copyright (c) Qualcomm Technologies, Inc. and/or its subsidiaries.
+ * SPDX-License-Identifier: BSD-3-Clause-Clear
+ */
 ///////////////////////////////////////////////////////////////////////////////
 // THIS FILE IS IMMUTABLE. DO NOT EDIT IN ANY CASE.                          //
 ///////////////////////////////////////////////////////////////////////////////
@@ -24,10 +23,10 @@
 package vendor.qti.coreif;
 @VintfStability
 parcelable RequestDataDescriptor {
-  String dataDescriptorId;
+  String dataDescriptorName;
   vendor.qti.coreif.RequestDataDescriptor.DataFormat dataFormat;
   ParcelFileDescriptor fd;
-  @Backing(type="int") @VintfStability
+  @Backing(type="int")
   enum DataFormat {
     BYTE_ARRAY = 0,
     JSON_STRING = 1,

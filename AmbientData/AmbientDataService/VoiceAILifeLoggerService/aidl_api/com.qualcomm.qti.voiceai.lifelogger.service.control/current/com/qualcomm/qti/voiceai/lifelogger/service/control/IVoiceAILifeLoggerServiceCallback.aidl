@@ -2,7 +2,6 @@
 * Copyright (c) Qualcomm Technologies, Inc. and/or its subsidiaries.
 * SPDX-License-Identifier: BSD-3-Clause-Clear
 */
-
 ///////////////////////////////////////////////////////////////////////////////
 // THIS FILE IS IMMUTABLE. DO NOT EDIT IN ANY CASE.                          //
 ///////////////////////////////////////////////////////////////////////////////
@@ -27,5 +26,5 @@ interface IVoiceAILifeLoggerServiceCallback {
   void onResult(in com.qualcomm.qti.voiceai.lifelogger.service.control.VoiceAILifeLoggerResponse result);
   void notifyEvent(in com.qualcomm.qti.voiceai.lifelogger.service.control.VoiceAILifeLoggerResponse event);
   void notifyData(in com.qualcomm.qti.voiceai.lifelogger.service.control.VoiceAILifeLoggerResponse data);
-  void onError(String error);
+  void onError(in com.qualcomm.qti.voiceai.lifelogger.service.control.VoiceAILifeLoggerResponse error);
 }

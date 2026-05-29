@@ -2,7 +2,6 @@
 * Copyright (c) Qualcomm Technologies, Inc. and/or its subsidiaries.
 * SPDX-License-Identifier: BSD-3-Clause-Clear
 */
-
 ///////////////////////////////////////////////////////////////////////////////
 // THIS FILE IS IMMUTABLE. DO NOT EDIT IN ANY CASE.                          //
 ///////////////////////////////////////////////////////////////////////////////
@@ -24,6 +23,6 @@
 package vendor.qti.AmbientDataReporting;
 @VintfStability
 interface IAmbientDataReporting {
-  boolean subscribeAmbientDataReporting(String reportingConfig, vendor.qti.AmbientDataReporting.IAmbientDataReportingCallback callback);
-  boolean unsubscribeAmbientDataReporting(String reportingSessionId, vendor.qti.AmbientDataReporting.IAmbientDataReportingCallback callback);
+  boolean subscribeAmbientDataReporting(String subscribeRequest, vendor.qti.AmbientDataReporting.IAmbientDataReportingCallback callback);
+  boolean unsubscribeAmbientDataReporting(String unsubscribeRequest, vendor.qti.AmbientDataReporting.IAmbientDataReportingCallback callback);
 }

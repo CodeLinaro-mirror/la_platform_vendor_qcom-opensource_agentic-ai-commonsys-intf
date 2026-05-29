@@ -2,7 +2,6 @@
 * Copyright (c) Qualcomm Technologies, Inc. and/or its subsidiaries.
 * SPDX-License-Identifier: BSD-3-Clause-Clear
 */
-
 ///////////////////////////////////////////////////////////////////////////////
 // THIS FILE IS IMMUTABLE. DO NOT EDIT IN ANY CASE.                          //
 ///////////////////////////////////////////////////////////////////////////////
@@ -27,7 +26,7 @@ parcelable VoiceAIConfigFileDescriptor {
   String configName;
   com.qualcomm.qti.voiceai.lifelogger.service.control.VoiceAIConfigFileDescriptor.DataFormat dataFormat;
   ParcelFileDescriptor fd;
-  @Backing(type="int") @VintfStability
+  @Backing(type="int")
   enum DataFormat {
     BYTE_STREAM = 0,
     JSON_STRING = 1,

@@ -2,7 +2,6 @@
 * Copyright (c) Qualcomm Technologies, Inc. and/or its subsidiaries.
 * SPDX-License-Identifier: BSD-3-Clause-Clear
 */
-
 ///////////////////////////////////////////////////////////////////////////////
 // THIS FILE IS IMMUTABLE. DO NOT EDIT IN ANY CASE.                          //
 ///////////////////////////////////////////////////////////////////////////////
@@ -25,5 +24,5 @@ package com.qualcomm.qti.voiceai.lifelogger.service.control;
 @VintfStability
 parcelable VoiceAILifeLoggerResponse {
   String response;
-  @nullable ParcelFileDescriptor pfd;
+  @nullable com.qualcomm.qti.voiceai.lifelogger.service.control.VoiceAILifeLoggerData[] voiceAiLoggerData;
 }

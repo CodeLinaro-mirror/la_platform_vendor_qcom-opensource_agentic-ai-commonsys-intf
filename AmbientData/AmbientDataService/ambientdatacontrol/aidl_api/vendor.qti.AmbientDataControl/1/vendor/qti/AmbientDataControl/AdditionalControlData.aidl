@@ -22,7 +22,13 @@
 
 package vendor.qti.AmbientDataControl;
 @VintfStability
-parcelable AmbientDataControlRequest {
-  String jsonRequest;
-  @nullable vendor.qti.AmbientDataControl.ControlConfigFileDescriptor[] controlData;
+parcelable AdditionalControlData {
+  String dataDescriptorName;
+  vendor.qti.AmbientDataControl.AdditionalControlData.DataFormat dataFormat;
+  ParcelFileDescriptor fd;
+  @Backing(type="int")
+  enum DataFormat {
+    BYTE_STREAM = 0,
+    JSON_STRING = 1,
+  }
 }

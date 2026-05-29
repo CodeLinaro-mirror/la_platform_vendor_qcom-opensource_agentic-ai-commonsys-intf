@@ -20,9 +20,15 @@
 // with such a backward incompatible change, it has a high risk of breaking
 // later when a module using the interface is updated, e.g., Mainline modules.
 
-package vendor.qti.AmbientDataControl;
+package vendor.qti.AmbientDataReporting;
 @VintfStability
-parcelable AmbientDataControlRequest {
-  String jsonRequest;
-  @nullable vendor.qti.AmbientDataControl.ControlConfigFileDescriptor[] controlData;
+parcelable AdditionalReportingData {
+  String dataDescriptorName;
+  vendor.qti.AmbientDataReporting.AdditionalReportingData.DataFormat dataFormat;
+  ParcelFileDescriptor fd;
+  @Backing(type="int")
+  enum DataFormat {
+    BYTE_STREAM = 0,
+    JSON_STRING = 1,
+  }
 }
