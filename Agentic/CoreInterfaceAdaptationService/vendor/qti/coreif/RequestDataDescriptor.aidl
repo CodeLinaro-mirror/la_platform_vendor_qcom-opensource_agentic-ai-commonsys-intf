@@ -10,10 +10,11 @@ import android.os.ParcelFileDescriptor;
 @VintfStability
 parcelable RequestDataDescriptor {
 
-    /** Name matching the fd reference used in jsonRequest */
-    String dataDescriptorId;
+    /** JSON request explicity indcates the name associated with file descriptor whcih has data.
+      *  dataDescriptorName will match the name idnicated in JSON request identifying the Fiel descriptor*/
+    String dataDescriptorName;
 
-    @Backing(type="int") @VintfStability
+    @Backing(type="int")
     enum DataFormat {
         BYTE_ARRAY  = 0,
         JSON_STRING = 1

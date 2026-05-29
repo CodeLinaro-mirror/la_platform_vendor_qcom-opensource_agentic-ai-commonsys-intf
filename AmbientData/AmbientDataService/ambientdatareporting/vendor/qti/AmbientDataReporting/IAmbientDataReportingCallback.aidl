@@ -16,25 +16,24 @@ import vendor.qti.AmbientDataReporting.AmbientDataReport;
 interface IAmbientDataReportingCallback {
 
     /**
-     * Called by service to provide outcome of processing a reuquest.
+     * Called by service to provide outcome of processing a request.
      * Always be called for a request and conforms to JSON schema for response.
      *
-     * @param resposne: JSON string containing Notification sessoion ID upon
-     *                  successful subscription, otherwise failure with details.    
+     * @param resposne: structure containing JSON RPC response.
      */
-    void onResult(String reponse);
-  
+    void onResult(in AmbientDataReport response);
+
     /**
      * Called to report sensor data event on subscribed notification sessions.
-     * 
+     *
      * @param AmbientDataReport: sensor data report.
      */
     void onAmbientDataEvent(in AmbientDataReport AmbientDataReport);
-    
+
     /**
      * Called to notify subscribed clients when asysnchonous error occurs.
      *
      * @param error: Response structure with JSON string containing details of error
      */
-    void onError(String error);
+    void onError(in AmbientDataReport error);
 }

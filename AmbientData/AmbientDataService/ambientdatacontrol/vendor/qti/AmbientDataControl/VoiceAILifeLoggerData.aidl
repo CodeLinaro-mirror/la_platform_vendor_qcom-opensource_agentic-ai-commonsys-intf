@@ -1,25 +1,21 @@
-/*
- * Copyright (c) 2026 Qualcomm Technologies, Inc.
- * All Rights Reserved.
- * Confidential and Proprietary - Qualcomm Technologies, Inc.
- */
+/**
+* Copyright (c) Qualcomm Technologies, Inc. and/or its subsidiaries.
+* SPDX-License-Identifier: BSD-3-Clause-Clear
+*/
 
-package vendor.qti.AmbientDataControl;
-
+package com.qualcomm.qti.voiceai.lifelogger.service.control;
 
 import android.os.ParcelFileDescriptor;
 
-
 /**
- * Control configuration file descriptor
+ * Structure to hold additioanl data sent from Voice AI response.
  */
 
-
 @VintfStability
-parcelable ControlConfigFileDescriptor {
-  /* A name assigned to file descriptor, used for mapping
-   * with indeitificcation provided in JSON RPC message */
-  String configName;
+parcelable VoiceAILifeLoggerData {
+  /* A name assigned with this file descriptor, will match the data descriptor
+   *  identification provided in JSON RPC message */
+  String dataDescriptorName;
 
    @Backing(type="int")
   /* Supported Format of data stored in the file descriptor */

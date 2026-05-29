@@ -17,22 +17,21 @@ import vendor.qti.AmbientDataReporting.AmbientDataReport;
 interface IAmbientDataReporting {
     /**
      * Subscription request handler for clients to register for lifelog sensor data notifications.
-     * A subscription is associated with a 'notification session id', on which data reporting occurs 
-     * 
-     * @param reportingConfig: JSON request with reporting config.
-     * @param callback:        Client callback to indicate reception status, response with
-     *                         notification session id and subsequent asynchronous notification events.
-     * returns a String with transaction Id specified in the request
+     *
+     * @param subscribeRequest: JSON request with subscription config.
+     * @param callback: Client callback to indicate reception status, response with
+     *                  notification session id and subsequent asynchronous notification events.
+     * returns boolean with status of reception by service. TRUE if requets was accepted, FALSE otherwise.
      */
-    boolean subscribeAmbientDataReporting(String reportingConfig, IAmbientDataReportingCallback callback);
+    boolean subscribeAmbientDataReporting(String subscribeRequest, IAmbientDataReportingCallback callback);
 
     /**
      * UnSubscribe request handler for clients to remove a subscribed lifelog sensor data notification session.
      * Subscribed 'notification session id' must be specified in the request, to unsubscribe the session.
      *
-     * @param reportingSessionId: JSON request with reporting session id to be unsubscribed.
-     * @param callback:           Client callback to indicate reception status, and unsubscribe response.
-     * returns a String with transaction Id specified in the request
+     * @param unsubscribeRequest: JSON request with unsubscription config.
+     * @param callback: Client callback to indicate reception status, and unsubscribe response.
+     * returns a boolean with status of reception by service. TRUE if requets was accepted, FALSE otherwise.
      */
-    boolean unsubscribeAmbientDataReporting(String reportingSessionId, IAmbientDataReportingCallback callback);
+    boolean unsubscribeAmbientDataReporting(String unsubscribeRequest, IAmbientDataReportingCallback callback);
 }

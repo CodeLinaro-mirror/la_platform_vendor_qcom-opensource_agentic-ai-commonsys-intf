@@ -35,5 +35,5 @@ interface IVoiceAILifeLoggerServiceCallback {
      * Called when an error occurs during request processing
      * @param error Response structure with JSON string containing details of error
      */
-    void onError(String error);
+    void onError(in VoiceAILifeLoggerResponse error);
 }

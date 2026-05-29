@@ -12,9 +12,9 @@ parcelable VoiceAIConfigFileDescriptor {
     /* A name assigned to file descriptor, used for mapping
      * with indeitificcation provided in JSON RPC message */
     String configName;
-  
+
     /* Supported Format of data stored in the file descriptor */
-    @Backing(type="int") @VintfStability
+    @Backing(type="int")
     enum DataFormat {
         /**
         * Data is stored as byte stream
